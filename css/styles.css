@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    margin: 10px 20px 0 20px;
+    padding: 0;
+}
+
+body {
+    --clr: white;
+    background-color: black;
+    color: var(--clr);
+}
+
+.light-mode {
+    --clr: black;
+    background-color: white;
+    color: var(--clr);
+}
+
+nav {
+    font-family: 'Mulish', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ol {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+li a{
+    text-decoration: none;
+    color: var(--clr);
+}
+
+nav img {
+    width: 50%;
+}
+
+/*------ Settings ------*/
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    cursor: pointer;
+    font-size: 20px;
+    fill: #a5a5b0;
+}
+
+.container .moon {
+    position: absolute;
+    animation: keyframes-fill .5s;
+}
+
+.container .sun {
+    position: absolute;
+    display: none;
+    animation: keyframes-fill .5s;
+}
+
+/* ------ On check event ------ */
+.container input:checked~.moon  {
+    display: none;
+
+}
+
+.container input:checked~.sun {
+    display: block;
+}
+
+/* ------ Hide the default checkbox ------ */
+.container input {
+    opacity: 0;
+}
+
+/* ------ Animation ------ */
+@keyframes keyframes-fill {
+    0% {
+        transform: rotate(-360deg) scale(0);
+        opacity: 0;
+    }
+
+    75% {
+        transform: rotate(25deg);
+    }
+}
+
+main {
+    
+    font-family: 'Poppins';
+    font-weight: 300;
+    margin-top: 4%;
+    margin-left: 3.5%;
+}
+
+main>img {
+    float: right;
+    border-radius: 50%;
+}
+
+.name {
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-size: 50px;
+    text-align: center;
+    background: linear-gradient(-20deg, #9845E8 -1.72%, #33D2FF 54.05%, #DD5789 99.78%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.buttons-container a {
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+.button {
+    padding: 5px;
+    margin-left: 2px;
+    border-image: linear-gradient(#4e86a5, #F4426C, #9358F7) 1;
+    border-width: 2px;
+    border-style: solid;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.button img {
+    margin: 5px;
+}
