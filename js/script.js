@@ -1,20 +1,26 @@
 function BWmode() {
    var element = document.body;
    element.classList.toggle("light-mode");
-
+   localStorage.setItem("theme", element.classList.contains("light-mode") ? "light" : "dark");
+   updateToggleIcon();
 }
-document.addEventListener('DOMContentLoaded', function () {
-   var isLightModeToggled = localStorage.getItem('lightModeToggled') === 'true';
-   var element = document.body;
-   if (isLightModeToggled) {
-      element.classList.add("light-mode");
+
+function updateToggleIcon() {
+   var moon = document.querySelector(".container .moon");
+   var sun = document.querySelector(".container .sun");
+   if (document.body.classList.contains("light-mode")) {
+       moon.style.display = "block";
+       sun.style.display = "none";
    } else {
-      element.classList.remove("light-mode");
+       moon.style.display = "none";
+       sun.style.display = "block";
    }
-   element.addEventListener('click', function (event) {
-      if (!event.target.closest('main') && event.target.closest('label')) {
-         element.classList.toggle("light-mode");
-         localStorage.setItem('lightModeToggled', element.classList.contains('light-mode'));
-      }
-   });
-});
+}
+
+window.onload = function() {
+   var storedTheme = localStorage.getItem("theme");
+   if (storedTheme === "light") {
+       document.body.classList.add("light-mode");
+   }
+   updateToggleIcon();
+};
