@@ -17,17 +17,10 @@ body {
 }
 
 nav {
-    margin-right: 0;
     font-family: 'Mulish', sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-nav img{
-    margin: 0%;
-}
-nav img:hover{
-    opacity: .8;
 }
 .list{
     display: contents;
@@ -44,13 +37,20 @@ li a{
 }
 
 .nameLogo {
-    width: 50%;
+    font-size: 2em;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    text-decoration: none;
+    color: #a5a5b0;
+    margin-left: 0;
+}
+.nameLogo:hover{
+    opacity: .8;
 }
 
 /*------ Settings ------*/
 .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: self-end;
     cursor: pointer;
     font-size: 20px;
@@ -96,10 +96,11 @@ li a{
 }
 
 main {
-    
     font-family: 'Poppins';
     font-weight: 300;
     margin-top: 4%;
+    padding-bottom: 3.5%;
+    border-bottom: 1px solid #a5a5b0;
 }
 
 main>img {
