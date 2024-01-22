@@ -21,8 +21,10 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid #a5a5b0;
 }
-.list{
+
+.list {
     display: contents;
 }
 
@@ -31,7 +33,8 @@ nav ol {
     list-style: none;
     margin: 0;
 }
-li a{
+
+li a {
     text-decoration: none;
     color: var(--clr);
 }
@@ -43,11 +46,11 @@ li a{
     color: #a5a5b0;
     margin-left: 0;
 }
-.nameLogo:hover{
+
+.nameLogo:hover {
     opacity: .8;
 }
 
-/*------ Settings ------*/
 .container {
     display: flex;
     justify-content: center;
@@ -68,8 +71,7 @@ li a{
     animation: keyframes-fill .5s;
 }
 
-/* ------ On check event ------ */
-.container input:checked~.moon  {
+.container input:checked~.moon {
     display: none;
 
 }
@@ -78,12 +80,10 @@ li a{
     display: block;
 }
 
-/* ------ Hide the default checkbox ------ */
 .container input {
     opacity: 0;
 }
 
-/* ------ Animation ------ */
 @keyframes keyframes-fill {
     0% {
         transform: rotate(-360deg) scale(0);
@@ -108,29 +108,31 @@ main>img {
     border-radius: 50%;
 }
 
-
-
 .name {
     font-family: 'Alegreya Sans SC', sans-serif;
     font-size: 3rem;
-    background: linear-gradient(-10deg, #DD5789 -1.72%, #9845E8 54.05%,#33D2FF 99.78%);
+    background: linear-gradient(-10deg, #DD5789 -1.72%, #9845E8 54.05%, #33D2FF 99.78%);
     background-size: 200% auto;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    animation: gradient 3s ease-in-out infinite alternate;
+    animation: gradient 2.5s ease-in infinite alternate;
 }
+
 @keyframes gradient {
-    0%{
+    0% {
         background-position: 0% 75%;
     }
-    50%{
+
+    50% {
         background-position: 100% 30%;
     }
-    100%{
+
+    100% {
         background-position: 0% 75%;
     }
 }
+
 .buttons-container a {
     margin: 2px 1px 2px 0;
     background-color: rgba(0, 0, 0, 0.8);
@@ -140,7 +142,7 @@ main>img {
 .button {
     padding: 5px;
     margin-left: 2px;
-    border-image: linear-gradient( #9358F7,#F4426C, #4e86a5) 1;
+    border-image: linear-gradient(#9358F7, #F4426C, #4e86a5) 1;
     border-width: 2px;
     border-style: solid;
     text-decoration: none;
@@ -149,5 +151,5 @@ main>img {
 }
 
 .button img {
-    margin: 5px;
+    margin: 1px;
 }
