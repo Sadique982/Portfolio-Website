@@ -153,3 +153,7 @@ main>img {
 .button img {
     margin: 1px;
 }
+
+section h6{
+    text-transform: uppercase;
+}
