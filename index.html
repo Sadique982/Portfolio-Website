@@ -7,28 +7,29 @@
     <title>Mohammed Sadique | Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@1,200&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@1,500&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,600;1,600&display=swap"
+        rel="stylesheet">
     <link rel="icon" href="pictures/MSlogo.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/script.js"></script>
 </head>
 
 <body>
     <nav>
-        <a href="index.html" class="nameLogo">Mohammed&nbsp;Sadique</a>
+        <a href="../sadique982.github.io" class="nameLogo">Mohammed&nbsp;Sadique</a>
         <div class="list">
             <ol>
-                <li><a href="index.html">Home</a></li>
-                <li>About</li>
-                <li>Projects</li>
-                <li>Contact</li>
+                <li><a href="../sadique982.github.io">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
                 <label class="container">
                     <input checked="checked" type="checkbox" onclick="BWmode()">
                     <svg viewBox="0 0 384 512" height="1em" xmlns="http://www.w3.org/2000/svg" class="moon">
@@ -45,11 +46,11 @@
             </ol>
         </div>
     </nav>
-    
+
     <main>
         <img src="pictures/Picture-GIF.gif">
         <p>Hey, I'm </p>
-        <h1 class="name">Mohammed Sadique</h1><br>
+        <h1 class="name" id="about">Mohammed Sadique</h1><br>
         <p>
             Currently pursuing Bachelor's program in Computer Science and Engineering at the Guru Gobind Singh
             Indraprastha
@@ -62,26 +63,94 @@
                 ideas,or exploring potential collaborative projects, feel free to reach out.
             </marquee>
         </p><br><br>
-        <div class="buttons-container">
+        <div class="buttons-container" id="contact">
             <a href="mailto:sadique.college@gmail.com" class="button" target="_blank">
-                <img src="pictures/Email.png" width="20" height="15" alt="Email">
+                <img src="pictures/Email.png" width="15" height="13" alt="Email">
                 Send an email
             </a>
             <a href="https://www.linkedin.com/in/Mohammed-Sadique20" class="button" target="_blank">
-                <img src="pictures/LinkedIn.png" width="20" height="15" alt="LinkedIn">
+                <img src="pictures/LinkedIn.png" width="15" height="13" alt="LinkedIn">
                 LinkedIn
             </a>
             <a href="https://github.com/Sadique982" class="button" target="_blank">
-                <img src="pictures/Github.png" width="20" height="15" alt="Github">
+                <img src="pictures/Github.png" width="15" height="13" alt="Github">
                 Github
             </a>
         </div>
+
     </main>
     <br>
     <section>
-        <h6>Feautured-Project</h6>
+        <h5 id="projects">Feautured-Project</h5>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <div>
+                <img src="pictures/Projects/Chinese Restaurant.webp" class="card-img-top">
+                <div class="card-text" id="project_detail">
+                    <div id="Project_name">David Chu's China Bistro</div>
+                    Chinese Restaurant website, A visually appealing  responsive website.
+                    <br><br>
+                    <span id="tech">
+                        HTML/CSS - JS - Bootstrap
+                    </span>
+                    <br><br>
+                    <a href="https://sadique982.github.io/Chinese-restaurant/" class="button" target="_blank">
+                        <img src="pictures/Vector.png"width="15" height="15"> Live demo
+                    </a>
+                    <a href="https://github.com/Sadique982/Chinese-restaurant" target="_blank" id="code">
+                        <img src="pictures/icons8-code-35.png">
+                    </a>
+                </div>
+            </div>
+            <div>
+                <img src="pictures/Projects/Chinese Restaurant.webp" class="card-img-top">
+                <div class="card-text" id="project_detail">
+                    <div id="Project_name">David Chu's China Bistro</div>
+                    Chinese Restaurant website, A visually appealing  responsive website.
+                    <br><br>
+                    <span id="tech">
+                        HTML/CSS - JS - Bootstrap
+                    </span>
+                    <br><br>
+                    <a href="https://sadique982.github.io/Chinese-restaurant/" class="button" target="_blank">
+                        <img src="pictures/Vector.png"width="15" height="15"> Live demo
+                    </a>
+                </div>
+            </div>
+            <div>
+                <img src="pictures/Projects/Chinese Restaurant.webp" class="card-img-top">
+                <div class="card-text" id="project_detail">
+                    <div id="Project_name">David Chu's China Bistro</div>
+                    Chinese Restaurant website, A visually appealing  responsive website.
+                    <br><br>
+                    <span id="tech">
+                        HTML/CSS - JS - Bootstrap
+                    </span>
+                    <br><br>
+                    <a href="https://sadique982.github.io/Chinese-restaurant/" class="button" target="_blank">
+                        <img src="pictures/Vector.png"width="15" height="15"> Live demo
+                    </a>
+                </div>
+            </div>
+            <div>
+                <img src="pictures/Projects/Chinese Restaurant.webp" class="card-img-top">
+                <div class="card-text" id="project_detail">
+                    <div id="Project_name">David Chu's China Bistro</div>
+                    Chinese Restaurant website, A visually appealing  responsive website.
+                    <br><br>
+                    <span id="tech">
+                        HTML/CSS - JS - Bootstrap
+                    </span>
+                    <br><br>
+                    <a href="https://sadique982.github.io/Chinese-restaurant/" class="button" target="_blank">
+                        <img src="pictures/Vector.png"width="15" height="15"> Live demo
+                    </a>
+                </div>
+            </div>
+        </div>
     </section>
-
+    <footer>
+        <div class="text-center">&copy; Copyright Mohammed-Sadique 2024</div>
+    </footer>
 </body>
 
 </html>

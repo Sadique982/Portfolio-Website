@@ -4,6 +4,11 @@
     padding: 0;
 }
 
+html {
+    padding: 0;
+    margin: 0;
+}
+
 body {
     --clr: white;
     background-color: black;
@@ -37,6 +42,18 @@ nav ol {
 li a {
     text-decoration: none;
     color: var(--clr);
+    margin: 0;
+    background-image: linear-gradient(180deg, transparent 95%, var(--clr), var(--clr));
+    background-repeat: no-repeat;
+    background-size: 0 100%;
+    padding-bottom: 3px;
+    transition: background-size .3s;
+
+}
+
+a:hover {
+    background-position-x: left;
+    background-size: 100% 100%;
 }
 
 .nameLogo {
@@ -142,7 +159,7 @@ main>img {
 .button {
     padding: 5px;
     margin-left: 2px;
-    border-image: linear-gradient(#9358F7, #F4426C, #4e86a5) 1;
+    border-image: linear-gradient( #F4426C, #9358F7, #4e86a5) 1;
     border-width: 2px;
     border-style: solid;
     text-decoration: none;
@@ -151,10 +168,47 @@ main>img {
 }
 
 .button img {
-    margin: 1px;
+    margin: 5px 2px 5px 5px;
 }
 
-section h6{
+section>h5 {
     text-transform: uppercase;
-    text-decoration: underline;
+    font-family: "Holtwood One SC", serif;
+    font-weight: lighter;
+}
+
+section {
+    margin-top: 2em;
+    border-bottom: 1px solid #a5a5b0;
+}
+
+section div {
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+    padding: 10px;
+    margin: 0;
+}
+#Project_name {
+    padding: 0;
+    margin-bottom: 5%;
+    font-weight: 900;
+}
+
+#project_detail {
+    margin: 15px;
+    font-family: 'Poppins';
+    font-weight: 300;
+}
+#tech {
+    font-weight: 100;
+    color: #6CACE4;
+}
+section div img {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+section a{
+    color: var(--clr);
+    margin: 0;
+    padding: 0;
 }
