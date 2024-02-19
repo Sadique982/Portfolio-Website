@@ -150,21 +150,18 @@ main>img {
     }
 }
 
-.buttons-container a {
-    margin: 2px 1px 2px 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-}
-
 .button {
     padding: 5px;
-    margin-left: 2px;
+    margin: 2px 1px 2px 0;
+    background-color: rgb(17, 16, 16);
+    color: white;
     border-image: linear-gradient( #F4426C, #9358F7, #4e86a5) 1;
     border-width: 2px;
     border-style: solid;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
+    vertical-align: top;
 }
 
 .button img {
@@ -198,6 +195,10 @@ section div {
     margin: 15px;
     font-family: 'Poppins';
     font-weight: 300;
+   
+}
+#btn {
+    position: relative;
 }
 #tech {
     font-weight: 100;
@@ -211,4 +212,12 @@ section a{
     color: var(--clr);
     margin: 0;
     padding: 0;
+}
+#demo {
+    margin-right: 5%;
+}
+#btn #code{
+        vertical-align: top;
+        padding: 0;
+        margin: 0;
 }
