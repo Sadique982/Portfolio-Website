@@ -52,6 +52,7 @@ li a {
 .dropdown-menu {
     background-color: var(--clr);
     opacity: .5;
+    transition: all ease-out .5s;
 }
 .dropdown-menu li {
     margin: 0;
