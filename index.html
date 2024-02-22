@@ -17,8 +17,7 @@
     <link rel="icon" href="pictures/MSlogo.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/styles.css">    
 </head>
 
 <body>
@@ -29,7 +28,14 @@
                 <li><a href="../sadique982.github.io">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Contact with me!</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" target="_blank" href="https://www.linkedin.com/in/Mohammed-Sadique20">LinkedIn</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://www.github.com/sadique982">Github</a></li>                    
+                        <li><a class="dropdown-item" target="_blank" href="https://twitter.com/sadique982">Twitter</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="mailto:sadique.college@gmail.com">Mail</a></li>
+                    </ul>
+                </li>
                 <label class="container">
                     <input checked="checked" type="checkbox" onclick="BWmode()">
                     <svg viewBox="0 0 384 512" height="1em" xmlns="http://www.w3.org/2000/svg" class="moon">
@@ -84,7 +90,7 @@
         <h5 id="projects">Featured-Projects</h5>
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
             <div>
-                <img src="pictures/Projects/Chinese Restaurant.webp" class="card-img-top">
+                <img src="pictures/Projects/Chinese Restaurant.webp" title="David Chu China Bistro" class="card-img-top">
                 <div class="card-text" id="project_detail">
                     <div id="Project_name">David Chu's China Bistro</div>
                     Chinese Restaurant website, A visually appealing  responsive design.
@@ -97,14 +103,14 @@
                         <a href="https://sadique982.github.io/Chinese-restaurant/" class="button" target="_blank" id="demo">
                             <img src="pictures/Vector.png"width="15" height="15"> Live demo
                         </a>
-                        <a href="https://github.com/Sadique982/Chinese-restaurant" target="_blank" id="code">
-                            <img src="pictures/icons8-code-40.png" id="code">
+                        <a href="https://github.com/Sadique982/Chinese-restaurant" title="View Code" target="_blank" id="code">
+                            <img src="pictures/icons8-code-45.png" id="code">
                         </a>
                     </div>
                 </div>
             </div>
             <div id="block" >
-                <img src="pictures/Projects/portfolio.webp" class="card-img-top">
+                <img src="pictures/Projects/portfolio.webp" title="Portfolio Website" class="card-img-top">
                 <div class="card-text" id="project_detail">
                     <div id="Project_name">My Portfolio Website</div>
                     Portfolio Website, to share about my work and my projects.
@@ -117,8 +123,8 @@
                         <a href="https://sadique982.github.io/" class="button" target="_blank" id="demo">
                             <img src="pictures/Vector.png"width="15" height="15"> Live demo
                         </a>
-                        <a href="https://github.com/Sadique982/sadique982.github.io" target="_blank" id="code">
-                            <img src="pictures/icons8-code-40.png" id="code">
+                        <a href="https://github.com/Sadique982/sadique982.github.io" title="View Code" target="_blank" id="code">
+                            <img src="pictures/icons8-code-45.png" id="code">
                         </a>
                     </div>
                 </div>
@@ -126,9 +132,11 @@
         </div>
     </section>
     <footer>
-        <a href="../sadique982.github.io/" style="text-align: right;" >&UpArrow; Go to top</a>
+        <a href="../sadique982.github.io/" style="text-align: right;">&UpArrow; Back to top</a>
         <div class="text-center">&copy; Copyright Mohammed-Sadique 2024</div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

@@ -11,26 +11,28 @@ html {
 
 body {
     --clr: white;
+    --bg-clr: black;
     background-color: black;
     color: var(--clr);
 }
 
 .light-mode {
     --clr: black;
+    --bg-clr: white;
     background-color: white;
     color: var(--clr);
 }
 
 nav {
+    margin-top: 0;
     font-family: 'Mulish', sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #a5a5b0;
-}
+    @media (max-width:767px) {
 
-.list {
-    display: contents;
+    }
 }
 
 nav ol {
@@ -43,12 +45,34 @@ li a {
     text-decoration: none;
     color: var(--clr);
     margin: 0;
-    background-image: linear-gradient(180deg, transparent 95%, var(--clr), var(--clr));
+    background-image: linear-gradient(180deg, transparent 95%,  #a5a5b0 ,  #a5a5b0);
     background-repeat: no-repeat;
     background-size: 0 100%;
     padding-bottom: 3px;
     transition: background-size .3s;
 
+}
+.dropdown-menu {
+    background-color: var(--clr);
+    opacity: .5;
+}
+.dropdown-menu li {
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+    transition: none;
+}
+.dropdown-menu li:hover {
+    background-color: #a5a5b0;
+}
+.dropdown-menu li a {
+    margin: 0;padding: 0;
+    color: var(--bg-clr);
+    
+    background-image: none;
+}
+.dropdown-menu li a:hover {
+    background-color: #a5a5b0;
 }
 
 a:hover {
@@ -70,8 +94,7 @@ a:hover {
 
 .container {
     display: flex;
-    justify-content: center;
-    align-items: self-end;
+    align-items: end;
     cursor: pointer;
     font-size: 20px;
     fill: #a5a5b0;
@@ -115,7 +138,7 @@ a:hover {
 main {
     font-family: 'Poppins';
     font-weight: 300;
-    margin-top: 4%;
+    margin-top: 5%;
     padding-bottom: 3.5%;
     border-bottom: 1px solid #a5a5b0;
 }
