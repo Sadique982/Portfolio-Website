@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Your Page Title</title>
+  <style>
+    body {
+      --clr: white;
+      background-color: black;
+      color: var(--clr);
+    }
+
+    .light-mode {
+      --clr: black;
+      background-color: white;
+      color: var(--clr);
+    }
+
+    /* Add your custom styles here if needed */
+    /* Example custom style for the moon and sun icons */
+    .container {
+      /* display: flex;
+    justify-content: center;
+    align-items: self-end; */
+      cursor: pointer;
+      font-size: 19px;
+      fill: #a5a5b0;
+
+    }
+
+    .container .moon {
+      position: absolute;
+      animation: keyframes-fill .5s;
+    }
+
+    .container .sun {
+      position: absolute;
+      display: none;
+      animation: keyframes-fill .5s;
+    }
+
+    .container input:checked~.moon {
+      display: none;
+
+    }
+
+    .container input:checked~.sun {
+      display: block;
+    }
+
+    .container input {
+      opacity: 0;
+    }
+
+    @keyframes keyframes-fill {
+      0% {
+        transform: rotate(-360deg) scale(0);
+        opacity: 0;
+      }
+
+      75% {
+        transform: rotate(25deg);
+      }
+    }
+  </style>
+  <script>
+    function BWmode() {
+      var element = document.body;
+      element.classList.toggle("light-mode");
+      localStorage.setItem("theme", element.classList.contains("light-mode") ? "light" : "dark");
+      updateToggleIcon();
+    }
+
+    function updateToggleIcon() {
+      var moon = document.querySelector(".container .moon");
+      var sun = document.querySelector(".container .sun");
+      if (document.body.classList.contains("light-mode")) {
+        moon.style.display = "block";
+        sun.style.display = "none";
+      } else {
+        moon.style.display = "none";
+        sun.style.display = "block";
+      }
+    }
+
+    window.onload = function () {
+      var storedTheme = localStorage.getItem("theme");
+      if (storedTheme === "light") {
+        document.body.classList.add("light-mode");
+      }
+      updateToggleIcon();
+    };
+
+  </script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+      aria-controls="navbarScroll" aria-expanded="true" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="container-fluid">
+      <div class="navbar-collapse collapse show " id="navbarScroll">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Projects</a>
+          </li>
+
+
+
+
+
+
+
+
+
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Contact Me
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" target="_blank"
+                  href="https://www.linkedin.com/in/Mohammed-Sadique20">LinkedIn</a></li>
+              <li><a class="dropdown-item" target="_blank" href="https://twitter.com/sadique982">Twitter</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" target="_blank" href="mailto:sadique.college@gmail.com">Mail</a></li>
+            </ul>
+          </li>
+        </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        <label class="container">
+          <input checked="checked" type="checkbox" onclick="BWmode()">
+          <svg viewBox="0 0 384 512" height="1em" xmlns="http://www.w3.org/2000/svg" class="moon">
+            <path
+              d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z">
+            </path>
+          </svg>
+          <svg viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg" class="sun">
+            <path
+              d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z">
+            </path>
+          </svg>
+        </label>
+      </div>
+    </div>
+  </nav>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
