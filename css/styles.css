@@ -23,6 +23,12 @@ body {
     color: var(--clr);
 }
 
+.firstPage {
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+}
+
 nav {
     margin-top: 0;
     font-family: 'Mulish', sans-serif;
@@ -30,51 +36,6 @@ nav {
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #a5a5b0;
-}
-
-nav ol {
-    display: flex;
-    list-style: none;
-    margin: 0;
-}
-
-li a {
-    text-decoration: none;
-    color: var(--clr);
-    margin: 0;
-    background-image: linear-gradient(180deg, transparent 95%,  #a5a5b0 ,  #a5a5b0);
-    background-repeat: no-repeat;
-    background-size: 0 100%;
-    padding-bottom: 3px;
-    transition: background-size .3s;
-
-}
-.dropdown-menu {
-    background-color: var(--clr);
-    opacity: .5;
-    transition: all ease-out .5s;
-}
-.dropdown-menu li {
-    margin: 0;
-    padding: 5px;
-    text-align: center;
-    transition: none;
-}
-.dropdown-menu li:hover {
-    background-color: #a5a5b0;
-}
-.dropdown-menu li a {
-    margin: 0;padding: 0;
-    color: var(--bg-clr);
-    background-image: none;
-}
-.dropdown-menu li a:hover {
-    background-color: #a5a5b0;
-}
-
-a:hover {
-    background-position-x: left;
-    background-size: 100% 100%;
 }
 
 .nameLogo {
@@ -87,6 +48,58 @@ a:hover {
 
 .nameLogo:hover {
     opacity: .8;
+}
+
+nav ol {
+    display: flex;
+    align-items: baseline;
+    list-style: none;
+    margin: 0;
+}
+
+li a {
+    text-decoration: none;
+    color: var(--clr);
+    margin: 0;
+    background-image: linear-gradient(180deg, transparent 95%, #a5a5b0, #a5a5b0);
+    background-repeat: no-repeat;
+    background-size: 0 100%;
+    padding-bottom: 3px;
+    transition: background-size .3s;
+
+}
+
+.dropdown-menu {
+    background-color: var(--clr);
+    opacity: .5;
+    transition: all ease-out .5s;
+}
+
+.dropdown-menu li {
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+    transition: none;
+}
+
+.dropdown-menu li:hover {
+    background-color: #a5a5b0;
+}
+
+.dropdown-menu li a {
+    margin: 0;
+    padding: 0;
+    color: var(--bg-clr);
+    background-image: none;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #a5a5b0;
+}
+
+a:hover {
+    background-position-x: left;
+    background-size: 100% 100%;
 }
 
 .container {
@@ -172,10 +185,10 @@ main>img {
 
 .button {
     padding: 5px;
-    margin: 2px 1px 2px 0;
+    margin: 2px 10px 0 0;
     background-color: rgb(17, 16, 16);
     color: white;
-    border-image: linear-gradient( #F4426C, #9358F7, #4e86a5) 1;
+    border-image: linear-gradient(#F4426C, #9358F7, #4e86a5) 1;
     border-width: 2px;
     border-style: solid;
     text-decoration: none;
@@ -191,11 +204,12 @@ main>img {
 section>h5 {
     text-transform: uppercase;
     font-family: "Holtwood One SC", serif;
-    font-weight: lighter;
+
 }
 
 section {
-    margin-top: 2em;
+    margin-top: 0;
+    padding-top: 0;
     border-bottom: 1px solid #a5a5b0;
 }
 
@@ -205,39 +219,53 @@ section div {
     padding: 10px;
     margin: 0;
 }
+
 #Project_name {
+    color: #a5a5b0;
+    font-family: "Holtwood One SC", serif;
+    overflow: hidden;
     padding: 0;
     margin-bottom: 5%;
-    font-weight: 900;
 }
 
 #project_detail {
     margin: 15px;
     font-family: 'Poppins';
     font-weight: 300;
-   
+
 }
+
 #btn {
     position: relative;
 }
+
 #tech {
     font-weight: 100;
     color: #6CACE4;
 }
-section div img {
-    aspect-ratio: 16 / 9;
+
+section div .card-img-top {
+    aspect-ratio: 16/9;
     object-fit: cover;
+    transition: transform 0.6s;
 }
-section a{
+
+section div .card-img-top:hover {
+    transform: scale(1.05);
+}
+
+section a {
     color: var(--clr);
     margin: 0;
     padding: 0;
 }
+
 #demo {
     margin-right: 5%;
 }
-#btn #code{
-        vertical-align: top;
-        padding: 0;
-        margin: 0;
+
+#btn #code {
+    vertical-align: top;
+    padding: 0;
+    margin: 0;
 }
